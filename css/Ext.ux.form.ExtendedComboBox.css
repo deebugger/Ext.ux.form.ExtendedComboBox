@@ -1,0 +1,37 @@
+/**
+ * Ext.ux.form.ExtendedComboBox.css - CSS for the extended combo box
+ *
+ * @author: Dror Ben-Gai (deebug.dev@gmail.com)
+ * @date: August, 2011
+ */
+
+.ux-extcombo-icon {
+	width:16px;
+	height:16px;
+	float:left;
+	background-position: -1px -1px ! important;
+	background-repeat:no-repeat ! important;
+}
+.ux-extcombo-icon-checked {
+	background: transparent url(../js/ext/resources/images/default/menu/checked.gif);
+}
+.ux-extcombo-icon-unchecked {
+	background: transparent url(../js/ext/resources/images/default/menu/unchecked.gif);
+}
+
+
+.ux-extcombo-fav-icon {
+	width:16px;
+	height:16px;
+	float:right;
+	background-position: -1px -1px ! important;
+	background-repeat:no-repeat ! important;
+}
+.ux-extcombo-fav-icon-checked {
+	background: transparent url(../images/icon1/star.png);
+
+}
+.ux-extcombo-fav-icon-unchecked {
+	background: transparent url(../images/icon1/star_empty.png);
+}
+

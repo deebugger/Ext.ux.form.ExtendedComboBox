@@ -1,0 +1,1 @@
+Ext.ux.form.ExtendedComboBox is an Ext 3.x combo box with multi-select and search capabilities. It includes a "Select All/Select All (limit #)/Select None" button, which also indicates how many items (none, some or all) are checked.
