@@ -46,7 +46,7 @@ Ext.ux.form.ExtendedComboBox = Ext.extend(Ext.form.ComboBox, {
     // (multi-select) text to be shown when all items have been selected
     // use '' (empty string) to always show the list of values
     // list of values will always be shown when showSelectAll (see above) is false
-    allSelectionText: '(' + Messages.get('casi.frontend.general.label.showAll') + ')',
+    allSelectionText: '(Show All)')',
 
     // (multi-select) select all values upon store.load complete
     selectAllOnLoad: false,
@@ -158,9 +158,7 @@ Ext.ux.form.ExtendedComboBox = Ext.extend(Ext.form.ComboBox, {
                             menu: [
                                 {
                                     id: 'multiSelectPopupSelections_' + me.id + '_all',
-                                    text: me.limitSelection <= 0 ? 
-                                        Messages.get('casi.frontend.extcombo.selectAll') :
-                                        Messages.get('casi.frontend.extcombo.selectAllLimit', {limit:me.limitSelection}),
+                                    text: me.limitSelection <= 0 ? 'Select All' : 'Select All (limit: ' + me.limitSelection + ')',
                                     iconCls: 'checkboxCheckedIcon',
                                     handler: function() {
                                         me.selectAll();
@@ -169,7 +167,7 @@ Ext.ux.form.ExtendedComboBox = Ext.extend(Ext.form.ComboBox, {
                                 },
                                 {
                                     id: 'multiSelectPopupSelections_' + me.id + '_none',
-                                    text: Messages.get('casi.frontend.extcombo.selectNone'),
+                                    text: 'Select None',
                                     iconCls: 'checkboxUncheckedIcon',
                                     handler: function() {
                                         me.selectNone();
@@ -275,7 +273,7 @@ Ext.ux.form.ExtendedComboBox = Ext.extend(Ext.form.ComboBox, {
             if(!record.get(this.checkField)
                     && this.limitSelection > 0
                     && this.limitSelection < this.getCheckedNum(false) + 1) {
-                message(Messages.get('casi.frontend.combo.limitReached', { limit: this.limitSelection}));
+                message('Selection is limited to ' + this.limitSelection + ' items.');
             } else {
                 // we're under the limit - punch it!
                 if(this.fireEvent('beforeselect', this, record, index) !== false){
