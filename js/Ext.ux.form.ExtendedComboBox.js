@@ -55,6 +55,8 @@ Ext.ux.form.ExtendedComboBox = Ext.extend(Ext.form.ComboBox, {
     showSearch: true,
 
     // (multi-select) the limit of items that can be selected
+    // if the value is larger than 0 and showSelectAll is true, then the 'select all' text
+    // will be replaced with the text 'select all (limit: #)'
     limitSelection: 0,
 
     // (multi-select) a unique name for an added field in the store to mark selected items
