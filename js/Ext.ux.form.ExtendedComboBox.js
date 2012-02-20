@@ -184,11 +184,11 @@ Ext.ux.form.ExtendedComboBox = Ext.extend(Ext.form.ComboBox, {
                             hidden: !me.showSearch,
                             xtype: 'ux-searchbox',
                             searchFunction: function(value) {
-                                me.store.filter('name', value, true, false);
+                                me.store.filter(me.displayField, value, true, false);
                                 me.updateSelectAllIcon(true);
                             },
                             clearFunction: function() {
-                                me.store.filter('name', '');
+                                me.store.filter(me.displayField, '');
                                 me.updateSelectAllIcon(true);
                             }
                         }
@@ -211,7 +211,7 @@ Ext.ux.form.ExtendedComboBox = Ext.extend(Ext.form.ComboBox, {
                     me.expand();
                     // re-set the search box value
                     Ext.getCmp('multiSelectPopupSearch_' + me.id).setValue(filterValue);
-                    me.store.filter('name', filterValue, true, false);
+                    me.store.filter(me.displayField, filterValue, true, false);
                     return;
                 }
                 if(me.showSearch) {
